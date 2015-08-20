@@ -177,6 +177,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Img\bg-c.jpg" />
+    <Content Include="Img\bg.jpg" />
+    <Content Include="Img\intro-pic-1.jpg" />
+    <Content Include="Img\intro-pic.jpg" />
+    <Content Include="Img\paneermakhni-0.jpg" />
+    <Content Include="Img\paneermkhni.jpg" />
+    <Content Include="Img\salad-1.jpg" />
+    <Content Include="Img\slide-1.jpg" />
+    <Content Include="Img\slide-2.jpg" />
+    <Content Include="Img\slide-3.jpg" />
+    <Content Include="Img\veg-1.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

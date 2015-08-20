@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -29,7 +29,18 @@
                     </form>
                 </div>
                 <div class="navbar-collapse collapse">
+                   
                     <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Inbox</a></li>
+                                <li><a href="#">Drafts</a></li>
+                                <li><a href="#">Sent Items</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Trash</a></li>
+                            </ul>
+                        </li>                        
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
