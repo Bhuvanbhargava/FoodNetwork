@@ -40,7 +40,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entity\Address.cs" />
+    <Compile Include="Entity\BaseEntity.cs" />
+    <Compile Include="Entity\CodeLookup.cs" />
+    <Compile Include="Entity\Dish.cs" />
+    <Compile Include="Entity\Feedback.cs" />
+    <Compile Include="Entity\Restaurant.cs" />
+    <Compile Include="Entity\Menu.cs" />
+    <Compile Include="Entity\SpiceLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
