@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA436BBA-BD40-42AC-A716-6E21D516A974}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{B833BEC6-B35E-4D77-A472-99665705B034}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FoodNetwork.Data</RootNamespace>
-    <AssemblyName>FoodNetwork.Data</AssemblyName>
+    <RootNamespace>GenerateDBSchema</RootNamespace>
+    <AssemblyName>GenerateDBSchema</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,17 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+    <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+    <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,41 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\AddressConfiguration.cs" />
-    <Compile Include="Configuration\BaseEntityConfiguration.cs" />
-    <Compile Include="Configuration\CodeLookup\CodeLookupConfiguration.cs" />
-    <Compile Include="Configuration\DishConfiguration.cs" />
-    <Compile Include="Configuration\MenuConfiguration.cs" />
-    <Compile Include="Configuration\RestaurantConfiguration.cs" />
-    <Compile Include="Configuration\ReviewConfiguration.cs" />
-    <Compile Include="Configuration\TestEntityConfiguration.cs" />
-    <Compile Include="DBContext\FoodNetworkDataBaseConnectionFactory.cs" />
-    <Compile Include="DBContext\FoodNetworkDatabaseContext.cs" />
-    <Compile Include="DBContext\IConnectionStringBuilder.cs" />
-    <Compile Include="DBContext\IFoodNetworkDatabaseContext.cs" />
-    <Compile Include="DBContext\IUnitOfWork.cs" />
-    <Compile Include="DBContext\UnitOfWork.cs" />
-    <Compile Include="DBContext\WindowsAuthenticationConnectionStringBuilder.cs" />
-    <Compile Include="Entity\Address.cs" />
-    <Compile Include="Entity\BaseEntity.cs" />
-    <Compile Include="Entity\CodeLookup\CodeLookup.cs" />
-    <Compile Include="Entity\CodeLookup\Country.cs" />
-    <Compile Include="Entity\CodeLookup\Rating.cs" />
-    <Compile Include="Entity\Dish.cs" />
-    <Compile Include="Entity\Review.cs" />
-    <Compile Include="Entity\CodeLookup\FoodCategory.cs" />
-    <Compile Include="Entity\CodeLookup\FoodType.cs" />
-    <Compile Include="Entity\CodeLookup\MenuCategory.cs" />
-    <Compile Include="Entity\Restaurant.cs" />
-    <Compile Include="Entity\Menu.cs" />
-    <Compile Include="Entity\TestEntity.cs" />
-    <Compile Include="Enum\SpiceLevel.cs" />
+    <Compile Include="FNDatabaseInitializer.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FoodNetwork.Data\FoodNetwork.Data.csproj">
+      <Project>{da436bba-bd40-42ac-a716-6e21d516a974}</Project>
+      <Name>FoodNetwork.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

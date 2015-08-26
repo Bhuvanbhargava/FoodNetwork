@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodNetwork.Data
+namespace FoodNetwork.Data.Entity
 {
-    public class Class1
+    public class Country : CodeLookup
     {
+ 
+        public string CountryName { get; set; }
+
     }
 }

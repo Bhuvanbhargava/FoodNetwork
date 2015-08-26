@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace FoodNetwork.Data.Entity
 {
-   
     public class Dish : BaseEntity
     {
-        public Guid DishId { get; set; }
-        public string Name { get; set; }
+        public FoodCategory Category { get; set; }
         public string Description { get; set; }
-        public string Category { get; set; }
-        public SpiceLevel SpiceLavel { get; set; }
+        public Guid DishId { get; set; }
+        public virtual List<Menu> Menu { get; set; }
+        public Guid MenuId { get; set; }
+        public string Name { get; set; }
         public decimal Price { get; set; }
-        public virtual Menu Menu { get; set; }
-
+        public SpiceLevel SpiceLavel { get; set; }
     }
 }
