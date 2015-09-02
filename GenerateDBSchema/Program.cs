@@ -11,44 +11,32 @@ namespace GenerateDBSchema
 {
     internal class Program
     {
-         static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            var connection = new WindowsAuthenticationConnectionStringBuilder();
-            using (var db = new FoodNetworkDatabaseContext(connection.FoodNetworkConnectionString))
+            var wdc = new WindowsAuthenticationConnectionStringBuilder();
+
+            using (var db = new FoodNetworkDatabaseContext(wdc.FoodNetworkConnectionString))
             {
-                
-                var blog = new TestEntity 
-                { 
-                    CreatedBy = "ME",
-                    CreatedDate = DateTime.Now,
-                    ModifiedBy = "You",
-                    ModifiedDate = DateTime.Now,
-                    Name = "Bhuavn" 
-                };
-                db.TestEntitys.Add(blog);
+                Database.SetInitializer(new DropCreateDatabaseAlways<FoodNetworkDatabaseContext>());
+                db.TestEntitys.Add(new TestEntity()
+                {
+                    //CreatedBy = "me",
+                    //CreatedDate = DateTime.Now,
+                    //ModifiedBy = "you",
+                    //ModifiedDate = DateTime.Now,
+                    Name = "bhuvan",
+                    LastName = "Bhargav"
+                });
                 db.SaveChanges();
-             
-                //var blog = new Blog { Name = name };
-                //db.Blogs.Add(blog);
-                //db.SaveChanges();
 
-                // Display all Blogs from the database 
-                //var query = from b in db.Blogs
-                //            orderby b.Name
-                //            select b;
+                foreach (var blog in db.TestEntitys)
+                {
+                    Console.WriteLine(blog.Name);
+                }
+            }
 
-                //Console.WriteLine("All blogs in the database:");
-                //foreach (var item in query)
-                //{
-                //    Console.WriteLine(item.Name);
-                //}
-
-                Console.WriteLine("Press any key to exit...");
-                Console.ReadKey();
-            } 
-        }               
-        
-    }  
-        
-   
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+        }
+    }
 }

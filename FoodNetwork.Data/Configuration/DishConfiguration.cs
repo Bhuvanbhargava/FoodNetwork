@@ -18,13 +18,13 @@ namespace FoodNetwork.Data.Configuration
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(a => a.Description).IsOptional();
-            Property(a => a.MenuId).IsRequired();
+            //Property(a => a.MenuId).IsRequired();
             Property(a => a.Name).IsRequired().HasMaxLength(100);
             Property(a => a.Price).IsRequired().HasPrecision(7, 2);
             Property(a => a.SpiceLavel).IsOptional();
 
-            HasRequired(a => a.Category);
-            HasMany(d => d.Menu).WithRequired();
+            //HasRequired(a => a.Category);
+            //HasRequired(d => d.Menu);
         }
     }
 }

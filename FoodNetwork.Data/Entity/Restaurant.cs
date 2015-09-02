@@ -9,13 +9,17 @@ namespace FoodNetwork.Data.Entity
     public class Restaurant : BaseEntity
     {
         public Guid RestaurantId { get; set; }
-        public Guid AddressId { get; set; }
-        public Guid CodeLookupId { get; set; }
-        public virtual List<Review> Feedback { get; set; }
-        public Guid FeedbackId { get; set; }
-        public FoodType FoodType { get; set; }
-        public virtual List<Address> Locations { get; set; }
+
+        //public virtual List<Review> Feedback { get; set; }
+        public virtual FoodType FoodType { get; set; }
+
+        public virtual ICollection<Address> Addresses { get; set; }
+
         public virtual List<Menu> Menus { get; set; }
         public string Name { get; set; }
+
+        public Guid AddressId { get; set; }
+        //public Guid CodeLookupId { get; set; }
+        //public Guid ReviewId { get; set; }
     }
 }

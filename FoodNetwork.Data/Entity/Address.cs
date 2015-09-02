@@ -11,8 +11,10 @@ namespace FoodNetwork.Data.Entity
         public virtual Country Country { get; set; }
         public string EmailId { get; set; }
         public virtual Restaurant Restaurant { get; set; }
+
         public Guid RestaurantId { get; set; }
         public string State { get; set; }
+
         public string Street { get; set; }
         public string Zip { get; set; }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Specialized;
 using System.Configuration;
 using System.Data.Common;
+using System.Data.SqlClient;
 
 namespace FoodNetwork.Data.DBContext
 {
@@ -31,7 +32,7 @@ namespace FoodNetwork.Data.DBContext
         private string BuidConnectionString()
         {
             var setting = ConfigurationManager.GetSection(FoodNetworkContextSetting) as NameValueCollection;
-            var builder = new DbConnectionStringBuilder
+            var builder = new DbConnectionStringBuilder()
             {
                 {
                     "Data Source",setting["server"]
@@ -44,13 +45,7 @@ namespace FoodNetwork.Data.DBContext
                 },
                  {
                     "MultipleActiveResultSets",true
-                }                
-                // {
-                //    "user Id",setting["user"]
-                //},
-                //{
-                //    "pwd",setting["pwd"]
-                //},
+                }
             };
             return builder.ConnectionString;
         }

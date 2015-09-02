@@ -21,12 +21,12 @@ namespace FoodNetwork.Data.Configuration
             Property(a => a.City).IsRequired();
             Property(a => a.ContactNumber).IsOptional();
             Property(a => a.EmailId).IsRequired();
-            Property(a => a.RestaurantId).IsRequired();
+            //Property(a => a.RestaurantId).IsRequired();
             Property(a => a.State).IsRequired();
             Property(a => a.Street).IsRequired();
             Property(a => a.Zip).IsRequired();
-            HasRequired(a => a.Restaurant);
-            HasRequired(a => a.Country);
+            //HasRequired(a => a.Country);
+            //HasRequired(a => a.Restaurant).WithMany(a => a.Addresses).HasForeignKey(a => a.RestaurantId).WillCascadeOnDelete(false);
         }
     }
 }

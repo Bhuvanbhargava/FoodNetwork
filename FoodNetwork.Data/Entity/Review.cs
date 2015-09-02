@@ -8,10 +8,10 @@ namespace FoodNetwork.Data.Entity
 {
     public class Review : BaseEntity
     {
-        public Guid FeedbackId { get; set; }
+        public Guid ReviewId { get; set; }
         public string Message { get; set; }
-        public Rating Rating { get; set; }
+        public virtual Rating Rating { get; set; }
         public virtual Restaurant Restaurant { get; set; }
-        public Guid RestaurantId { get; set; }
+        //public Guid RestaurantId { get; set; }
     }
 }

@@ -16,11 +16,17 @@ namespace FoodNetwork.Data.Configuration
                .Property(m => m.MenuId)
                .IsRequired()
                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(m => m.DishId).IsRequired();
-            Property(m => m.RestaurantId).IsRequired();
-            HasRequired(m => m.Category);
-            HasRequired(m => m.Restaurant);
-            HasMany(m => m.Dish).WithRequired();
+            //Property(m => m.DishId).IsRequired();
+            //Property(m => m.RestaurantId).IsRequired();
+            //HasRequired(m => m.Category);
+            //HasRequired(m => m.Restaurant);
+            //HasRequired(a => a.Restaurant).WithMany(a => a.Menus).HasForeignKey(a => a.RestaurantId).WillCascadeOnDelete(false);
+            //HasMany(m => m.Dish); //.WithMany(a => a.Menu).Map(m =>
+            //{
+            //    m.ToTable("MenuDish");
+            //    m.MapLeftKey("MenuId");
+            //    m.MapRightKey("Dish");
+            //}); ;
         }
     }
 }

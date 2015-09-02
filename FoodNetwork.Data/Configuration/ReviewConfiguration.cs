@@ -7,14 +7,14 @@ namespace FoodNetwork.Data.Configuration
     {
         public ReviewConfiguration()
         {
-            HasKey(f => f.FeedbackId)
-                .Property(f => f.FeedbackId)
+            HasKey(f => f.ReviewId)
+                .Property(f => f.ReviewId)
                 .IsRequired()
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(f => f.Message).IsRequired();
-            Property(f => f.RestaurantId).IsRequired();
-            HasRequired(f => f.Rating);
-            HasRequired(f => f.Restaurant);
+            //Property(f => f.RestaurantId).IsRequired();
+            //HasRequired(f => f.Rating);
+            //HasRequired(f => f.Restaurant);
         }
     }
 }

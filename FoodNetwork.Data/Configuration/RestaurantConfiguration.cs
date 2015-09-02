@@ -18,14 +18,14 @@ namespace FoodNetwork.Data.Configuration
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(r => r.Name).IsOptional();
-            Property(r => r.AddressId).IsRequired();
-            Property(r => r.CodeLookupId).IsRequired();
-            Property(r => r.FeedbackId).IsRequired();
+            //Property(r => r.AddressId).IsRequired();
+            //Property(r => r.CodeLookupId).IsRequired();
+            //Property(r => r.FeedbackId).IsRequired();
 
-            HasRequired(r => r.FoodType);
-            HasMany(r => r.Feedback).WithRequired();
-            HasMany(r => r.Locations).WithRequired();
-            HasMany(r => r.Menus).WithRequired();
+            //HasRequired(r => r.FoodType);
+            ////HasMany(r => r.Feedback).WithRequired();
+            ////HasMany(r => r.Menus).WithRequired()
+            //HasMany(a => a.Addresses).WithRequired();
         }
     }
 }
