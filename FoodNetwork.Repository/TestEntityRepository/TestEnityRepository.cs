@@ -9,25 +9,26 @@ using System.Threading.Tasks;
 
 namespace FoodNetwork.Repository
 {
-    public class TestEnityRepository : GenericRepository<TestEntity>, ITestEntityRepository
+    public class TestEnityRepository : BaseRepository, ITestEntityRepository
     {
-        public TestEnityRepository(FoodNetworkDatabaseContext context)
+        public TestEnityRepository(IFoodNetworkDatabaseContext context)
             : base(context)
         {
         }
 
-        public override IEnumerable<TestEntity> GetAll()
+        public IEnumerable<TestEntity> GetAll()
         {
-            return _dbContext.TestEntitys.Include(x => x.Name).AsEnumerable();
+            return FoodDbContext.TestEntitys.AsEnumerable();
             //return _dbContext;
         }
 
         public TestEntity GetById(Guid id)
         {
-            //return _dbset.Include(x => x.).Where(x => x.Id == id).FirstOrDefault();
-            //return _dbset.Where(x => x.Id == id).FirstOrDefault();
-            return FindBy(x=>x.TestEntityId==id).FirstOrDefault();
+            return FoodDbContext.TestEntitys.Where(x => x.TestEntityId == id).FirstOrDefault();
         }
+
+        
+
 
    
     }

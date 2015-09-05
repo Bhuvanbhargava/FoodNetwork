@@ -1,6 +1,6 @@
 ﻿namespace FoodNetwork.Data.DBContext
 {
-    public class FoodNetworkDataBaseConnectionFactory
+    public class FoodNetworkDataBaseConnectionFactory 
     {
         public FoodNetworkDataBaseConnectionFactory(IConnectionStringBuilder connectionStringBuilder)
         {
@@ -9,7 +9,7 @@
 
         public IFoodNetworkDatabaseContext GetDbContext()
         {
-            var context = new FoodNetworkDatabaseContext(_connectionBuilder.FoodNetworkConnectionString);
+            var context = new FoodNetworkDatabaseContext(_connectionBuilder.FoodNetworkConnectionString);          
             context.Configuration.LazyLoadingEnabled = false;
             return context;
         }

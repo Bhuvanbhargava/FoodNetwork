@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodNetwork.Context
+namespace FoodNetwork.Data.Entity
 {
-    public class Class1
+    public class FoodType : CodeLookup
     {
+        public string Ethnicity { get; set; }
     }
 }

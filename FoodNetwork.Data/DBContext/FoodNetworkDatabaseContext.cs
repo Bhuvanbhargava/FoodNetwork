@@ -12,6 +12,7 @@ namespace FoodNetwork.Data.DBContext
 {
     public class FoodNetworkDatabaseContext : DbContext, IFoodNetworkDatabaseContext
     {
+    
         static FoodNetworkDatabaseContext()
         {
             System.Data.Entity.Database.SetInitializer<FoodNetworkDatabaseContext>(null);
@@ -21,6 +22,11 @@ namespace FoodNetwork.Data.DBContext
             base(connectionString)
         {
         }
+        //public FoodNetworkDatabaseContext()
+        //    : base("Name=FoodNetworkDatabaseContext")
+        //{
+
+        //}
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

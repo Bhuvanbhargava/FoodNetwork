@@ -7,8 +7,8 @@
     <ProjectGuid>{348EF85E-3911-4BB4-BA2E-B362F9960AC3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FoodNetwork.Context</RootNamespace>
-    <AssemblyName>FoodNetwork.Context</AssemblyName>
+    <RootNamespace>FoodNetwork.FeatureContext</RootNamespace>
+    <AssemblyName>FoodNetwork.FeatureContext</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,11 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="FeatureContext\BaseFeatureContext.cs" />
+    <Compile Include="FeatureContext\ITestEntityFeatureContext.cs" />
+    <Compile Include="FeatureContext\TestEntityFeatureContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BaseFeatureContext\" />
+    <ProjectReference Include="..\FoodNetwork.Data\FoodNetwork.Data.csproj">
+      <Project>{da436bba-bd40-42ac-a716-6e21d516a974}</Project>
+      <Name>FoodNetwork.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodNetwork.Repository\FoodNetwork.Repository.csproj">
+      <Project>{8da7f938-15f0-44be-8877-88d16fcd80c6}</Project>
+      <Name>FoodNetwork.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

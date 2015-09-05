@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace FoodNetwork.Repository
 {
-    public interface ITestEntityRepository : IGenericRepository<TestEntity>
+    public interface ITestEntityRepository : IBaseRepository
     {
         TestEntity GetById(Guid id);
+        IEnumerable<TestEntity> GetAll();
     }
 }

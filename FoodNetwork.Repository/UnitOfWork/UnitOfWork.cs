@@ -21,10 +21,10 @@ namespace FoodNetwork.Repository
         /// Initializes a new instance of the UnitOfWork class.
         /// </summary>
         /// <param name="context">The object context</param>
-        public UnitOfWork(IConnectionStringBuilder connectionBuilder)
+        public UnitOfWork(IFoodNetworkDatabaseContext context)
         {
-            var factory = new FoodNetworkDataBaseConnectionFactory(connectionBuilder);      
-            _dbContext = factory.GetDbContext();
+           // var factory = new FoodNetworkDataBaseConnectionFactory(connectionBuilder);      
+            _dbContext = context;
            
         }
         /// <summary>

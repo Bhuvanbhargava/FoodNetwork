@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FoodNetwork.Data.Entity;
+using FoodNetwork.FeatureContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,14 +9,24 @@ using System.Web.Http;
 
 namespace FoodNetwork.WebApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ValuesController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        private ITestEntityFeatureContext _testEntityFeatureContext;
+
+         public ValuesController(){
+             var test = "Test";
+         }
+         public ValuesController(ITestEntityFeatureContext testEntityFeatureContext)
+         {
+             _testEntityFeatureContext = testEntityFeatureContext;
+         }
+         // GET api/values
+         public IEnumerable<TestEntity> Get()
+         {             
+             return _testEntityFeatureContext.GetAll();
+             //return new string[] { "value1", "value2" };
+         }
 
         // GET api/values/5
         public string Get(int id)
