@@ -29,53 +29,53 @@ namespace FoodNetwork.WebApi.Tests.Controllers
         //    Assert.AreEqual("value2", result.ElementAt(1));
         //}
 
-        [TestMethod]
-        public void GetById()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
+        //[TestMethod]
+        //public void GetById()
+        //{
+        //    // Arrange
+        //    ValuesController controller = new ValuesController();
 
-            // Act
-            string result = controller.Get(5);
+        //    // Act
+        //    string result = controller.Get(5);
 
-            // Assert
-            Assert.AreEqual("value", result);
-        }
+        //    // Assert
+        //    Assert.AreEqual("value", result);
+        //}
 
-        [TestMethod]
-        public void Post()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
+        //[TestMethod]
+        //public void Post()
+        //{
+        //    // Arrange
+        //    ValuesController controller = new ValuesController();
 
-            // Act
-            controller.Post("value");
+        //    // Act
+        //    controller.Post("value");
 
-            // Assert
-        }
+        //    // Assert
+        //}
 
-        [TestMethod]
-        public void Put()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
+        //[TestMethod]
+        //public void Put()
+        //{
+        //    // Arrange
+        //    ValuesController controller = new ValuesController();
 
-            // Act
-            controller.Put(5, "value");
+        //    // Act
+        //    controller.Put(5, "value");
 
-            // Assert
-        }
+        //    // Assert
+        //}
 
-        [TestMethod]
-        public void Delete()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
+        //[TestMethod]
+        //public void Delete()
+        //{
+        //    // Arrange
+        //    ValuesController controller = new ValuesController();
 
-            // Act
-            controller.Delete(5);
+        //    // Act
+        //    controller.Delete(5);
 
-            // Assert
-        }
+        //    // Assert
+        //}
     }
 }

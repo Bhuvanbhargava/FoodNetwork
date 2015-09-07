@@ -180,6 +180,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Img\bg-c.jpg" />
     <Content Include="Img\bg.jpg" />
+    <Content Include="Img\foodlogo.jpg" />
     <Content Include="Img\intro-pic-1.jpg" />
     <Content Include="Img\intro-pic.jpg" />
     <Content Include="Img\paneermakhni-0.jpg" />

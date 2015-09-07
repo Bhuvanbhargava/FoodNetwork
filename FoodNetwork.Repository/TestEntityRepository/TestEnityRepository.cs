@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace FoodNetwork.Repository
 {
-    public class TestEnityRepository : BaseRepository, ITestEntityRepository
+    public class TestEntityRepository : BaseRepository, ITestEntityRepository
     {
-        public TestEnityRepository(IFoodNetworkDatabaseContext context)
+        public TestEntityRepository(IFoodNetworkDatabaseContext context)
             : base(context)
         {
         }

@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\RestaurantDomain.cs" />
+    <Compile Include="TestEntityRepository\IRestaurantRepository.cs" />
+    <Compile Include="TestEntityRepository\RestaurantRepository.cs" />
     <Compile Include="TestEntityRepository\TestEnityRepository.cs" />
     <Compile Include="Common\BaseRepository.cs" />
     <Compile Include="Common\IBaseRepository.cs" />

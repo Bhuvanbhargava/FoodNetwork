@@ -43,6 +43,9 @@
     <Compile Include="FeatureContext\ITestEntityFeatureContext.cs" />
     <Compile Include="FeatureContext\TestEntityFeatureContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestaurantFeature\DTO\RestaurantDataTransferObject.cs" />
+    <Compile Include="RestaurantFeature\IRestaurantFeatureContext.cs" />
+    <Compile Include="RestaurantFeature\RestaurantFeatureContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodNetwork.Data\FoodNetwork.Data.csproj">
@@ -54,6 +57,7 @@
       <Name>FoodNetwork.Repository</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
