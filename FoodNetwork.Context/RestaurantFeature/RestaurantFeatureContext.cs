@@ -1,4 +1,5 @@
-﻿using FoodNetwork.Repository;
+﻿using FoodNetwork.Common.Attribute;
+using FoodNetwork.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace FoodNetwork.FeatureContext.RestaurantFeature
 {
+    [DependencyDiscovery(typeof(IRestaurantFeatureContext))]
     public class RestaurantFeatureContext : BaseFeatureContext,IRestaurantFeatureContext
     {
         private IRestaurantRepository _restaurantRepository;

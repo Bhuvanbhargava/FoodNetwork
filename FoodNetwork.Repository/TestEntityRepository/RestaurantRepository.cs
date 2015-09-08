@@ -1,4 +1,5 @@
-﻿using FoodNetwork.Data.DBContext;
+﻿using FoodNetwork.Common.Attribute;
+using FoodNetwork.Data.DBContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace FoodNetwork.Repository
 {
+    [DependencyDiscovery(typeof(IRestaurantRepository))]
     public class RestaurantRepository : BaseRepository, IRestaurantRepository 
     {
         public RestaurantRepository(IFoodNetworkDatabaseContext dbcontext)

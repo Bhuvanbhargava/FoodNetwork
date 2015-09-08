@@ -1,4 +1,5 @@
-﻿using FoodNetwork.Data.DBContext;
+﻿using FoodNetwork.Common.Attribute;
+using FoodNetwork.Data.DBContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace FoodNetwork.Repository
     /// <summary>
     /// The Entity Framework implementation of IUnitOfWork
     /// </summary>
+    [DependencyDiscovery(typeof(IUnitOfWork))]
     public sealed class UnitOfWork : IUnitOfWork, IDisposable
     {
         /// <summary>

@@ -60,6 +60,10 @@
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FoodNetwork.Common\FoodNetwork.Common.csproj">
+      <Project>{c1418ce8-2024-4f1c-91e9-0f3fd418fada}</Project>
+      <Name>FoodNetwork.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FoodNetwork.Data\FoodNetwork.Data.csproj">
       <Project>{da436bba-bd40-42ac-a716-6e21d516a974}</Project>
       <Name>FoodNetwork.Data</Name>
