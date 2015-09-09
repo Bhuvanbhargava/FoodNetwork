@@ -217,9 +217,12 @@
     <Compile Include="Areas\Restaurants\ModelRepository\RestaurantModelRepository.cs" />
     <Compile Include="Areas\Restaurants\Response\RestaurantModel.cs" />
     <Compile Include="Areas\Restaurants\RestaurantsAreaRegistration.cs" />
+    <Compile Include="Common\FoodnetworkEventSource.cs" />
     <Compile Include="Common\CustomArgumentException.cs" />
     <Compile Include="Common\Link.cs" />
     <Compile Include="Common\Resource.cs" />
+    <Compile Include="Common\WebApiExceptionLogger.cs" />
+    <Compile Include="Common\WebApiExceptionHandler.cs" />
     <Compile Include="Common\WebAPIHttpActionResult.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

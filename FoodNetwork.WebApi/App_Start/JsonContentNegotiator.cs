@@ -20,9 +20,7 @@ namespace FoodNetwork.WebApi
             public JsonContentNegotiator(JsonMediaTypeFormatter formatter)
             {
                 _jsonFormatter = formatter;
-                var settings = _jsonFormatter.SerializerSettings;
-                settings.Formatting = Formatting.Indented;
-                settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+               
             }
 
             public ContentNegotiationResult Negotiate(Type type, HttpRequestMessage request, IEnumerable<MediaTypeFormatter> formatters)
