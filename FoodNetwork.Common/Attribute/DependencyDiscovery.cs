@@ -10,7 +10,7 @@ namespace FoodNetwork.Common.Attribute
     /// DependencyDiscovery attribut applied on class and struct to register them with Unity
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
-    public class DependencyDiscovery :  System.Attribute 
+    public sealed class DependencyDiscovery :  System.Attribute 
     {
 
         public readonly Type InterfaceType;

@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FoodNetwork.WebApi.Common;
+using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility;
 
 namespace FoodNetwork.WebApi.Tests.Common
 {
@@ -9,7 +11,7 @@ namespace FoodNetwork.WebApi.Tests.Common
         [TestMethod]
         public void ShouldValidateEventSource()
         {
-            //EventSourceAnalyzer.InspectAll(SemanticLoggingEventSource.Log);
+            EventSourceAnalyzer.InspectAll(FoodnetworkEventSource.Log);
         }
     }
 }

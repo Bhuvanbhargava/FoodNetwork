@@ -2,9 +2,11 @@
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.Diagnostics;
 using System.Net.Http.Formatting;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
+using System.Web.Http.Tracing;
 
 
 namespace FoodNetwork.WebApi
@@ -18,7 +20,25 @@ namespace FoodNetwork.WebApi
     
             // Web API configuration and services
             config.Services.Add(typeof(IExceptionLogger), new WebApiExceptionLogger());
-            config.Services.Add(typeof(IExceptionHandler), new WebApiExceptionHandler());
+            config.Services.Replace(typeof(IExceptionHandler), new WebApiExceptionHandler());
+            #region FoodNetworkTraceWriter
+            // Step 2: create a WebApiEtwTraceWriter and register it
+            // with the WebApi configuration's services.  This registration
+            // effectively enables tracing from the WebAPI core.            
+            FoodNetworkTraceWriter traceWriter = new FoodNetworkTraceWriter();
+            config.Services.Replace(typeof(System.Web.Http.Tracing.ITraceWriter), traceWriter);
+
+            // Uncomment the next 2 lines to remove all filtering and to
+            // allow every trace request to trace to ETW.
+            // The default filters permit only a small
+            // subset of traces to reduce the noise.
+            // Alternatively, provide your own predicates here to
+            // control which trace requests are sent to ETW.
+
+            //traceWriter.TraceRequestFilter = null;
+            //traceWriter.TraceRecordFilter = null; 
+            #endregion
+
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));

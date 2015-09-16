@@ -12,7 +12,7 @@ using System.Web.Http.Description;
 namespace FoodNetwork.WebApi.Areas.Restaurants.Controllers
 {
     [RoutePrefix("api/v1/restaurant")]
-    [RestfulApiException]
+   // [RestfulApiException]
     public class RestaurantController : WebApiController
     {
         private IRestaurantModelRepository _restaurantModelRepository;

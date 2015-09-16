@@ -22,10 +22,10 @@ namespace FoodNetwork.WebApi.Areas.Restaurants.ModelRepository
         public IEnumerable<RestaurantResponse> GetRestaurants() 
         {
             var restaurantsDto= _restaurantFeatureContext.GetRestaurant();
-            //if (restaurantsDto.Count() == 0)
-            //{
-            //    throw new CustomArgumentException(409, "erro");
-            //}
+            if (restaurantsDto.Count() == 0)
+            {
+                throw new CustomArgumentException(409,"erro");
+            }
              return restaurantsDto.Select(a => new RestaurantResponse(a));
             //if (restaurants.Count() == 0) 
             //{
