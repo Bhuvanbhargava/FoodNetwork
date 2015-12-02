@@ -1,0 +1,45 @@
+﻿Installing assembly 'C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe
+   logfile = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.InstallLog
+An exception occurred while trying to find the installers in the C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe.
+Rolling back assembly 'C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe
+   logfile = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.InstallLog
+An exception occurred while trying to find the installers in the C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe.
+Installing assembly 'C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe
+   logfile = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.InstallLog
+An exception occurred while trying to find the installers in the C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe.
+Rolling back assembly 'C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe
+   logfile = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.InstallLog
+An exception occurred while trying to find the installers in the C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe.
+Installing assembly 'C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe
+   logfile = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.InstallLog
+Installing service Enterprise Library Semantic Logging Service...
+Service Enterprise Library Semantic Logging Service has been successfully installed.
+Creating EventLog source Enterprise Library Semantic Logging Service in log Application...
+Committing assembly 'C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.exe
+   logfile = C:\GitHub\FoodNetwork\packages\EnterpriseLibrary.SemanticLogging.Service.2.0.1406.1\tools\SemanticLogging-svc.InstallLog
